@@ -13,7 +13,7 @@ const Home = () => {
 	const eliminarTarea = (indice) => {
 		setArregloTemp(
 			arregloTemp.filter((item, index) => {
-				return index !==indice;
+				return index = !indice;
 			})
 		)
 	}
@@ -40,7 +40,7 @@ const Home = () => {
 					<>{arregloTemp.map((item, index) => {
 						return <li key={index} className="d-flex justify-content-between border m-0">
 							{item.tarea}
-							<p
+							<button
 								className="ocultar text-danger"
 								type="button"
 								onClick={() => {
@@ -48,7 +48,7 @@ const Home = () => {
 								}}
 							>
 								X
-							</p>
+							</button>
 						</li>
 					})}</>
 					:
